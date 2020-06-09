@@ -27,10 +27,14 @@ body {
 }
 
 
-a:link, a:visited,
-a:hover, a:active {
+.caret:link,  .caret:visited,
+.caret:hover, .caret:active {
   text-decoration: none;
   color: inherit;
+}
+
+.caret {
+  /*scroll-behavior: smooth;*/
 }
 
 /* Main body */
@@ -52,4 +56,8 @@ a:hover, a:active {
 
 .jumbo {
   height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
 }
