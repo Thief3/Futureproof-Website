@@ -1,0 +1,45 @@
+/* Defaults */
+body {
+  font-family: 'Merriweather', serif;
+}
+
+/* Landing page stuff. */
+
+#landing {
+  height: 100vh;
+  background-color: #FFEBCD;
+  
+}
+
+.growth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  flex: 1;
+}
+
+.landing-header {
+  color: #121212;
+  font-size: 72px;
+  line-height: 4.6rem;
+  width: 38rem;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+
+a:link, a:visited,
+a:hover, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Flex stuff */
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
