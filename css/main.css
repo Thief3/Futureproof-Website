@@ -6,9 +6,7 @@ body {
 /* Landing page stuff. */
 
 #landing {
-  height: 100vh;
   background-color: #FFEBCD;
-  
 }
 
 .growth-container {
@@ -35,6 +33,14 @@ a:hover, a:active {
   color: inherit;
 }
 
+/* Main body */
+
+#main {
+  background-color: #001f3f;
+  color: #AAAAAA;
+  
+}
+
 /* Flex stuff */
 
 .section-container {
@@ -42,4 +48,8 @@ a:hover, a:active {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.jumbo {
+  height: 100vh;
 }
