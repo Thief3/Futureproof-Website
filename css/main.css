@@ -81,9 +81,9 @@ body {
   width: 42rem;
   margin-right: 50px;
   border-radius: 20px;
-  
- /* background: #eee;*/
 
+  height: 100%;
+  
   transform-origin: center center;
   transform: scale(1);
   transition: transform 0.5s;
@@ -139,4 +139,146 @@ html {
 
 .slides > section {
   flex-direction: column;
+}
+
+
+/* Older stuff */
+
+.email {
+  font-family: 'Fira Sans', Arial, sans-serif;
+  font-size: 24px;
+  justify-content: center;
+  text-align: right;
+}
+
+.section-heading {
+  font-family: 'Fira Sans', Arial, sans-serif;
+  font-size: 32px;
+  padding-top: 12px;
+  padding-bottom: 8px;
+}
+
+.exp-heading {
+  font-family: 'Fira Sans', Arial, sans-serif;
+  font-size: 24px;
+  padding-top: 8px;
+  padding-bottom: 4px;
+}
+
+.stack-heading {
+  font-family: 'Fira Sans', Arial, sans-serif;
+  font-size: 12px;
+  font-variant: all-small-caps;
+}
+
+.stack {
+  font-family: 'merriweatherregular', serif;
+  font-size: 12px;
+}
+
+a {
+  font-family: 'merriweatherbold', Arial, sans-serif;
+  /*text-decoration: none;*/
+  font-variant: all-small-caps;
+}
+
+a:hover, a:visited:hover {
+  text-decoration: underline;
+  color: #e8550b;
+}
+
+a:visited {
+  /*text-decoration: none;*/
+}
+
+a, a:visited {
+  color: inherit;
+}
+
+.date, .role, .grade {
+  font-family: 'Fira Sans', Arial, sans-serif;
+  font-size: 12px;
+}
+
+.education-box {
+  flex-direction: row;
+}
+
+.two-column {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+  margin-top:2px;
+  align-items: baseline;
+}
+.two-column .first {
+  align-items: flex-start;
+  width: 30%;
+}
+.two-column .second {
+  width: 70%;
+  text-align: right;
+}
+
+#stack-lists div {
+  font-family: 'Fira Sans', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  align-text: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+#stack-lists div h3 {
+  text-align: center;
+}
+#stack-lists {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.exp-item {
+  margin-top: 32px;
+  margin-bottom: 20px;
+}
+
+li {
+  padding-top: 8px;
+  padding-bottom: 4px;
+}
+
+ul {
+  padding-top:4px;
+   list-style-type: disc; 
+   list-style-position: inside;
+}
+
+h2, h3 {
+  padding-top: 8px;
+  padding-bottom: 4px;
+}
+
+b {
+  font-family: 'merriweatherbold', serif;
+  font-variant: all-small-caps;
+  font-size: 1.25em;
+}
+
+section {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: block;
+  justify-content: left;
+  align-content: left;
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+img {
+  padding-top: 16px;
 }
