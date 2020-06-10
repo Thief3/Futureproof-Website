@@ -23,7 +23,7 @@ body {
   font-size: 72px;
   line-height: 4.6rem;
   width: 38rem;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Fira Sans', Arial, sans-serif;
 }
 
 
@@ -118,7 +118,6 @@ body {
   }
 }
 
-
 /* Flex stuff */
 
 .section-container {
@@ -136,12 +135,20 @@ html {
   scroll-behavior: smooth;
 }
 
-
 .slides > section {
   flex-direction: column;
 }
 
-
+#projects{
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  justify-content: left;
+  align-content: left;
+  width: 95%;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
 /* Older stuff */
 
 .email {
@@ -172,12 +179,12 @@ html {
 }
 
 .stack {
-  font-family: 'merriweatherregular', serif;
+  font-family: 'Merriweather', serif;
   font-size: 12px;
 }
 
 a {
-  font-family: 'merriweatherbold', Arial, sans-serif;
+  font-family: 'Merriweather', Arial, sans-serif;
   /*text-decoration: none;*/
   font-variant: all-small-caps;
 }
@@ -263,22 +270,28 @@ h2, h3 {
 }
 
 b {
-  font-family: 'merriweatherbold', serif;
+  font-family: 'Merriweather', serif;
   font-variant: all-small-caps;
   font-size: 1.25em;
 }
 
 section {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  /*padding-top: 32px;
+  padding-bottom: 32px;*/
   display: block;
   justify-content: left;
   align-content: left;
   width: 100%;
+  /*
   margin-top: 24px;
-  margin-bottom: 16px;
+  margin-bottom: 16px;*/
 }
 
 img {
   padding-top: 16px;
+}
+
+#project > img {
+  width: 80%;
+  
 }
