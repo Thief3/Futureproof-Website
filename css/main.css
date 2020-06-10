@@ -45,6 +45,80 @@ body {
   
 }
 
+.slider {
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  height: 95%;
+  width: 42rem;
+}
+
+.slides::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.slides::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+
+.slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.slides > section {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 42rem;
+  margin-right: 50px;
+  border-radius: 20px;
+  
+ /* background: #eee;*/
+
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+
+  position: relative;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.slider > nav > a {
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 0.5rem 0;
+}
+
+.slider > nav > a:active {
+  top: 1px;
+  text-decoration: underline;
+}
+
+.slider > nav > a:focus {
+  background: #000;
+}
+
+/* Don't need button navigation */
+@supports (scroll-snap-type) {
+  .slider > nav > a {
+    display: none;
+  }
+}
+
+
 /* Flex stuff */
 
 .section-container {
@@ -60,4 +134,9 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+
+.slides > section {
+  flex-direction: column;
 }
