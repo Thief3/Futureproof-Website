@@ -57,13 +57,15 @@ body {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 
-  height: 95%;
+  /*height: 95%;*/
   width: 42rem;
+
+  overflow-y: hidden;
 }
 
 .slides::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 0px;
+  height: 0px;
 }
 
 .slides::-webkit-scrollbar-thumb {
@@ -81,8 +83,6 @@ body {
   width: 42rem;
   margin-right: 50px;
   border-radius: 20px;
-
-  height: 100%;
   
   transform-origin: center center;
   transform: scale(1);
@@ -148,7 +148,24 @@ html {
   width: 95%;
   margin-top: 24px;
   margin-bottom: 16px;
+  overflow-y: scroll;
 }
+
+#projects::-webkit-scrollbar {
+  width: 10px;
+  height: 0px;
+}
+
+#projects::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+
+#projects::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
 /* Older stuff */
 
 .email {
@@ -160,7 +177,7 @@ html {
 
 .section-heading {
   font-family: 'Fira Sans', Arial, sans-serif;
-  font-size: 32px;
+  font-size: 48px;
   padding-top: 12px;
   padding-bottom: 8px;
 }
@@ -174,13 +191,13 @@ html {
 
 .stack-heading {
   font-family: 'Fira Sans', Arial, sans-serif;
-  font-size: 12px;
+  font-size: 24px;
   font-variant: all-small-caps;
 }
 
 .stack {
   font-family: 'Merriweather', serif;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 a {
@@ -215,15 +232,16 @@ a, a:visited {
   display: flex;
   flex-direction:row;
   justify-content: space-around;
-  margin-top:2px;
-  align-items: baseline;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  align-items: baseline;  
 }
 .two-column .first {
   align-items: flex-start;
-  width: 30%;
+  width: 15%;
 }
 .two-column .second {
-  width: 70%;
+  width: 85%;
   text-align: right;
 }
 
@@ -282,7 +300,8 @@ section {
   justify-content: left;
   align-content: left;
   width: 100%;
-  /*
+  /*min-height: 100%;*/
+/*
   margin-top: 24px;
   margin-bottom: 16px;*/
 }
