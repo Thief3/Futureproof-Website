@@ -1,9 +1,56 @@
-/* Defaults */
+/* Defaults ********************************************************************/
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Merriweather', serif;
 }
 
-/* Landing page stuff. */
+#main {
+  background-color: #001f3f;
+  color: #AAAAAA;
+  
+}
+
+
+img {
+  padding-top: 16px;
+  max-width: 90%;
+}
+
+li {
+  padding-top: 8px;
+  padding-bottom: 4px;
+}
+
+ul {
+  padding-top:4px;
+  list-style-type: disc; 
+  list-style-position: inside;
+}
+
+h2, h3 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 32px;
+}
+
+b {
+  font-family: 'Merriweather', serif;
+  font-variant: all-small-caps;
+  font-size: 1.25em;
+}
+
+section {
+  display: block;
+  justify-content: left;
+  align-content: left;
+  width: 100%;
+}
+
+/* Landing page stuff. *********************************************************/
 
 #landing {
   background-color: #FFEBCD;
@@ -14,7 +61,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   flex: 1;
 }
 
@@ -26,23 +72,20 @@ body {
   font-family: 'Fira Sans', Arial, sans-serif;
 }
 
-
 .caret:link,  .caret:visited,
 .caret:hover, .caret:active {
   text-decoration: none;
   color: inherit;
 }
 
-.caret {
-  /*scroll-behavior: smooth;*/
-}
+/* Slider **********************************************************************/
 
-/* Main body */
+.section-container {
+  display: flex;
+  flex-direction: column;
 
-#main {
-  background-color: #001f3f;
-  color: #AAAAAA;
-  
+  align-items: center;
+  justify-content: center;
 }
 
 .slider {
@@ -51,36 +94,23 @@ body {
 
 .slides {
   display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
   
+  scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 
-  /*height: 95%;*/
   width: 42rem;
 
+  overflow-x: hidden;
   overflow-y: hidden;
-}
-
-.slides::-webkit-scrollbar {
-  width: 0px;
-  height: 0px;
-}
-
-.slides::-webkit-scrollbar-thumb {
-  background: black;
-  border-radius: 10px;
-}
-
-.slides::-webkit-scrollbar-track {
-  background: transparent;
+  align-contents: left;
 }
 
 .slides > section {
-  scroll-snap-align: start;
+  flex-direction: column;
   flex-shrink: 0;
   width: 42rem;
+
   margin-right: 50px;
   border-radius: 20px;
   
@@ -88,12 +118,20 @@ body {
   transform: scale(1);
   transition: transform 0.5s;
 
+  scroll-snap-align: start;
+  
   position: relative;
   
-  display: flex;
   justify-content: center;
   align-items: center;
 
+  padding-top: 32px;
+  padding-bottom: 32px;
+  
+  margin-top: 24px;
+  margin-bottom: 16px;
+  
+  
 }
 
 .slider > nav > a {
@@ -118,36 +156,28 @@ body {
   }
 }
 
-/* Flex stuff */
+/* About ***********************************************************************/
 
-.section-container {
+#about-main {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
 }
 
-.jumbo {
-  height: 100vh;
+#img-me > img {
+  border-radius: 50%;
+  
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-.slides > section {
-  flex-direction: column;
-}
+/* Projects ********************************************************************/
 
 #projects{
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+
   justify-content: left;
   align-content: left;
+
   width: 95%;
-  margin-top: 24px;
-  margin-bottom: 16px;
+
   overflow-y: scroll;
 }
 
@@ -164,9 +194,6 @@ html {
 #projects::-webkit-scrollbar-track {
   background: transparent;
 }
-
-
-/* Older stuff */
 
 .email {
   font-family: 'Fira Sans', Arial, sans-serif;
@@ -202,17 +229,12 @@ html {
 
 a {
   font-family: 'Merriweather', Arial, sans-serif;
-  /*text-decoration: none;*/
   font-variant: all-small-caps;
 }
 
 a:hover, a:visited:hover {
   text-decoration: underline;
   color: #e8550b;
-}
-
-a:visited {
-  /*text-decoration: none;*/
 }
 
 a, a:visited {
@@ -267,50 +289,21 @@ a, a:visited {
 }
 
 .exp-item {
-  margin-top: 32px;
-  margin-bottom: 20px;
-}
-
-li {
-  padding-top: 8px;
-  padding-bottom: 4px;
-}
-
-ul {
-  padding-top:4px;
-   list-style-type: disc; 
-   list-style-position: inside;
-}
-
-h2, h3 {
-  padding-top: 8px;
-  padding-bottom: 4px;
-}
-
-b {
-  font-family: 'Merriweather', serif;
-  font-variant: all-small-caps;
-  font-size: 1.25em;
-}
-
-section {
-  /*padding-top: 32px;
-  padding-bottom: 32px;*/
-  display: block;
-  justify-content: left;
-  align-content: left;
-  width: 100%;
-  /*min-height: 100%;*/
-/*
-  margin-top: 24px;
-  margin-bottom: 16px;*/
-}
-
-img {
-  padding-top: 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 #project > img {
   width: 80%;
-  
+}
+
+
+/* *************************************************/
+
+
+
+/* Misc ************************************************************************/
+
+.jumbo {
+  height: 100vh;
 }
