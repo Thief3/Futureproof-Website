@@ -6,6 +6,7 @@ html {
 
 body {
   font-family: 'Merriweather', serif;
+  line-height: 1.8rem;
 }
 
 #main {
@@ -14,6 +15,10 @@ body {
   
 }
 
+p {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
 
 img {
   padding-top: 16px;
@@ -31,10 +36,15 @@ ul {
   list-style-position: inside;
 }
 
-h2, h3 {
+
+h1, h2, h3 {
   padding-top: 8px;
   padding-bottom: 8px;
   font-size: 32px;
+}
+
+h1 {
+  padding-bottom: 32px;
 }
 
 b {
@@ -289,8 +299,7 @@ a, a:visited {
 }
 
 .exp-item {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-bottom: 48px;
 }
 
 #project > img {
