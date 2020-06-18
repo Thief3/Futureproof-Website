@@ -328,18 +328,50 @@ nav > a {
   display: none;
 }
 
-input.truth:checked ~ #lie-reveal{
+input.truth:checked ~ .response > #lie-reveal{
   display: none;
 }
-input.truth:checked ~ #truth-reveal{
+input.truth:checked ~ .response > #truth-reveal{
   display: block;
 }
 
-input.lie:checked ~ #truth-reveal{
+input.lie:checked ~ .response > #truth-reveal{
   display: none;
 }
-input.lie:checked ~ #lie-reveal{
+input.lie:checked ~ .response > #lie-reveal{
   display: block;
+}
+
+section > #truth-lie {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.truth-lie-card {
+  /* Flex is annoying here for the functionality. Since the card is simple,
+     just leave it as a block.
+ */
+  padding: 24px 20px 24px 20px;
+  margin: 0 auto 32px auto;
+  
+  width: 75%;
+
+  -webkit-box-shadow: 45px 24px 14px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 45px 24px 14px 0px rgba(0,0,0,0.75);
+  box-shadow: 45px 24px 14px 0px rgba(0,0,0,0.75);
+  
+  border-radius: 12px;
+  background-color: #FFEBCD;
+  color: #121212;
+}
+
+.truth-lie-card > label {
+  
+}
+
+.response {
+  display: flex;
 }
 
 /* Misc ************************************************************************/
