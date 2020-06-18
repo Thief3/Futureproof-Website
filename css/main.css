@@ -322,9 +322,25 @@ nav > a {
 }
 
 
-/* *************************************************/
+/* Two Truths and a Lie ********************************************************/
 
+#truth-reveal, #lie-reveal {
+  display: none;
+}
 
+input.truth:checked ~ #lie-reveal{
+  display: none;
+}
+input.truth:checked ~ #truth-reveal{
+  display: block;
+}
+
+input.lie:checked ~ #truth-reveal{
+  display: none;
+}
+input.lie:checked ~ #lie-reveal{
+  display: block;
+}
 
 /* Misc ************************************************************************/
 
