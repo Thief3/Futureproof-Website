@@ -20,6 +20,20 @@ p {
   padding-bottom: 8px;
 }
 
+a {
+  font-family: 'Merriweather', Arial, sans-serif;
+  font-variant: all-small-caps;
+}
+
+a:hover, a:visited:hover {
+  text-decoration: underline;
+  color: #e8550b;
+}
+
+a, a:visited {
+  color: inherit;
+}
+
 img {
   padding-top: 16px;
   max-width: 90%;
@@ -88,6 +102,43 @@ section {
   color: inherit;
 }
 
+/* Nav bar *********************************************************************/
+
+nav {
+  display: flex;
+  flex-direction: row;
+  
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+
+nav > a {
+  font-size: 1.4rem;
+  
+  align-items: center;
+  justify-content: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+nav > a:active {
+  top: 1px;
+  text-decoration: underline;
+}
+
+nav > a:focus {
+  background: #000;
+}
+
+/* Don't need button navigation */
+@supports (scroll-snap-type) {
+nav > a {
+    display: none;
+  }
+}
+
+
 /* Slider **********************************************************************/
 
 .section-container {
@@ -142,28 +193,6 @@ section {
   margin-bottom: 16px;
   
   
-}
-
-.slider > nav > a {
-  align-items: center;
-  justify-content: center;
-  margin: 0 0 0.5rem 0;
-}
-
-.slider > nav > a:active {
-  top: 1px;
-  text-decoration: underline;
-}
-
-.slider > nav > a:focus {
-  background: #000;
-}
-
-/* Don't need button navigation */
-@supports (scroll-snap-type) {
-  .slider > nav > a {
-    display: none;
-  }
 }
 
 /* About ***********************************************************************/
@@ -235,20 +264,6 @@ section {
 .stack {
   font-family: 'Merriweather', serif;
   font-size: 16px;
-}
-
-a {
-  font-family: 'Merriweather', Arial, sans-serif;
-  font-variant: all-small-caps;
-}
-
-a:hover, a:visited:hover {
-  text-decoration: underline;
-  color: #e8550b;
-}
-
-a, a:visited {
-  color: inherit;
 }
 
 .date, .role, .grade {
